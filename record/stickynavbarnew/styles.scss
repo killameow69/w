@@ -1,0 +1,84 @@
+// styles.scss
+
+$primary-color: #007BFF;
+$background-color: #f0f2f5;
+$navbar-height: 60px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+}
+
+.navbar {
+    background-color: white;
+    height: $navbar-height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    nav {
+        .nav-links {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin-left: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+                    padding: 10px 15px;
+
+                    &:hover {
+                        background-color: $primary-color;
+                        color: white;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+    padding-top: $navbar-height + 20px;
+
+    section {
+        padding: 40px 20px;
+        min-height: 100vh;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    }
+}
